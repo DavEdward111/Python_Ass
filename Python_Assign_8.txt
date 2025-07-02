@@ -1,0 +1,83 @@
+1. # Get a student's detail which include name, age, and height
+name = input('what is your name: ')
+age = int(input('How old are you: '))
+height = float(input('What is your height: '))
+
+print(name, type(name))
+print(age, type(age))
+print(f'your height is {height}cm', type(height))
+
+2. # greeting message
+def greet_user(name):
+    print(f'Welcome {name}, enjoy your moment.')
+
+greet_user('Edward')
+
+3. #Mini login system
+# asking for the users input
+username = input('Enter your username: ').lower()
+password = input('Enter your password: ')
+
+# checking to see if the details match with our condition
+if username == 'admin' and password == '1234':
+    print('Login Successful')
+else:
+    print('Access denied')
+
+4. # Basic calculator
+def add(a, b):
+    return a + b
+def substract(a, b):
+    return a - b
+def multiply(a, b):
+    return a * b
+def divide(a, b):
+    if b!=0:
+        return round((a / b),2)
+    else:
+        print('Error! division by zero')
+
+# loop for user to perform calculation more than one time
+while True:
+    num1 = int(input('Enter the num1: '))
+    num2 = int(input('Enter the num2: '))
+
+    # operation setting
+    operation = input("pick an operator ('+', '-', '*', '/'): ")
+
+    # perform operation based on operation
+    if operation == '+':
+        print('The result is: ', add(num1, num2))
+    elif operation == '-':
+        print('The result is: ', substract(num1, num2))
+    elif operation == '*':
+        print('The result is :', multiply(num1, num2))
+    elif operation == '/':
+        print('The result is: ', divide(num1, num2))
+    else:
+        print('Invalid operation, please try again!')
+    
+    # asking the user if the want to perform another calculation?
+    repeat = input('Do you want perform another calculation? (yes/no)').lower()
+    if repeat != 'yes' :
+        print('Thanks for using python calculator. Goodbye!')
+        break
+
+5. # Age Categorizer
+# asking for user age
+age = int(input('Enter your age'))
+# checking if the user is a child from our condition
+if age <= 12:
+    print('You are a child')
+    # checking if the user is a teen from our condition
+elif age <= 19:
+    print('You are a teen')
+    # checking if the user is an adult from our condition
+elif age <= 64:
+    print('Your are an adult')
+    # checking if the user is a senior from our condition
+else:
+    print('You are a senior')
+    
+
+
